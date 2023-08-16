@@ -1,0 +1,32 @@
+app:
+  currency: USD
+  say-greeting: 'Trying to retrieve string form properties : success'
+  timezone: Asia/Jakarta
+cloud:
+  api-key: ${CLOUD_KEY}
+
+server:
+  port: 5000
+
+#spring data source
+spring:
+  datasource:
+    hikari:
+      connection-timeout:600000
+      idle-timeout:600000
+      max-lifetime:180000
+      maximum-pool-size:10
+    url: jdbc:postgresql://127.0.0.1/spring-boot
+    username: postgres
+    password: admin
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+
+
